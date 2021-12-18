@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
 
+let data = [
+  {
+    nft: "https://news.artnet.com/app/news-upload/2021/09/Yuga-Labs-Bored-Ape-Yacht-Club-4466.jpg",
+    title: "Carlos' NFT",
+    description: "Worth millions",
+    price: "0.134 ETH",
+    creator: "Carlos Diaz"
+  }
+]
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data.map((nft)=> {
+        return <Card />
+      })}
     </div>
   );
 }
